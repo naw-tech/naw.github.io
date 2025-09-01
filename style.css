@@ -84,7 +84,7 @@ footer {
   text-align: center;
   padding: 1rem;
   position: fixed;
-  width: 100%;
-  bottom: 0;
+  /* position: fixed; ← 削除 */
+  /* bottom: 0; ← 削除 */
 }
 
