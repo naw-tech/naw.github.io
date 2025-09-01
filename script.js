@@ -1,13 +1,18 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  const message = document.getElementById('formMessage');
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-  if (name && email) {
-    document.getElementById('formMessage').textContent = 'お問い合わせありがとうございます。';
-  } else {
-    document.getElementById('formMessage').textContent = 'すべてのフィールドを入力してください。';
-  }
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (name && email) {
+      message.textContent = 'お問い合わせありがとうございます。';
+    } else {
+      message.textContent = 'すべてのフィールドを入力してください。';
+    }
+  });
 });
 
